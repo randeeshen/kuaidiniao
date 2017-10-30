@@ -21,12 +21,17 @@ Or install it yourself as:
 
 ### Config
 ```ruby
-#required
+# required
+# mch_id:  快递鸟用户ID
+# app_key: 快递鸟app_key
 Kuaidiniao.mch_id = 'xxx'
 Kuaidiniao.app_key = 'xxxxxx'
 
-#call get_trace
-result = Kuaidiniao::Service.get_trace('', 'YTO', '12345678')
+# call get_trace
+# 参数一:  快递公司编码
+# 参数二:  快递单号
+# 参数三:  商家订单编号
+result = Kuaidiniao::Service.get_trace('YTO', '12345678', '')
 ```
 
 ## License

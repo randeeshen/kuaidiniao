@@ -7,10 +7,10 @@ module Kuaidiniao
     REQUEST_URL = 'http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx'.freeze
 
     # 查询订单物流轨迹，按照运单号单个查询
-    # order_code 订单编号
     # shipper_code 快递公司编码
     # logistic_code 物流单号
-    def self.get_trace(order_code, shipper_code, logistic_code)
+    # order_code 订单编号
+    def self.get_trace(shipper_code, logistic_code, order_code='')
       request_data = "{'OrderCode':'#{order_code}','ShipperCode':'#{shipper_code}','LogisticCode':'#{logistic_code}'}"
       post_data = {
         'EBusinessID': Kuaidiniao.mch_id,
